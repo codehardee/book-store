@@ -24,24 +24,23 @@ class Admin:
         self.book = new_book
         return f"Admin {self.name} added a new book: '{self.book.title}' by {self.book.author}"
 
+book = Book("book", "author", "123")
 
-book = Book("Sample Book", "Sample Author", "123456789")
 
-# admin = Admin("Bob", "admin", book)
 
-student = Student("Alice", "student", book)
+student = Student("stud1", "stud", book)
 if student.role_type == "student":
     print(student.show_book_info())
 
-admin = Admin("Bob", "admin", book)
+admin = Admin("abc", "admin", book)
 
 
 if student.role_type == "student":
     print(student.show_book_info())
 
-new_book = Admin("bob", "admin", book)
+new_book = Admin("abcd", "admin", book)
 
 if student.role_type == "student":
     print(student.show_book_info())
-new_book_info = admin.add_book("New Book", "New Author", "987654321")
+new_book_info = admin.add_book("book1", "author2", "987654321")
 print(new_book_info)
